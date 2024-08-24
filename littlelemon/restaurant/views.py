@@ -14,12 +14,12 @@ def index(request):
     return render(request, 'index.html', {})
 
 class BookingView(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
     queryset = Booking.objects.all()
     serializer_class = bookingSerializer
     
 class MenuView(generics.ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class =menuSerializer
 
