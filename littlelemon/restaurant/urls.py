@@ -9,7 +9,7 @@ router.register(r'tables', views.BookingView)
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('menu/',views.MenuView.as_view()),
+    path('menu/',views.MenuView.as_view(),name='menu'),
     path('menu/<int:pk>', views.SingleMenuItemView.as_view()),
     path('booking/',include(router.urls)),
     path('api-token-auth/',obtain_auth_token),
